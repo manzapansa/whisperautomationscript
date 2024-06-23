@@ -1,13 +1,10 @@
-# whisperautomationscript ////// This Python script monitors a designated folder for new audio files, processes them using the Whisper AI model, and organizes the output transcription files. It is designed to run continuously, automatically detecting and processing new files as they arrive.
-
-
 import os
 import shutil
 import subprocess
 import time
 
 # Define directories
-base_dir = "C:\\WhisperAudio"
+base_dir = os.path.expanduser("~/WhisperAudio")
 audio_dir = os.path.join(base_dir, "audio")
 processed_dir = os.path.join(base_dir, "processed")
 text_dir = os.path.join(base_dir, "text")
